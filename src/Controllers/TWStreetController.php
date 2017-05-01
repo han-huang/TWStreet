@@ -26,7 +26,7 @@ class TWStreetController
      *
      * @var Colors\Color $color
      */
-    protected $color;   
+    protected $color;
 
     /**
      * Create a new TWStreetController instance.
@@ -46,9 +46,10 @@ class TWStreetController
      */
     public function info($str)
     {
-		// $c = $this->color;
-		// echo $c($str)->white();
-		echo $str.PHP_EOL;;
+        // $c = $this->color;
+        // echo $c($str)->white();
+        echo $str.PHP_EOL;
+        ;
     }
 
     /**
@@ -59,8 +60,8 @@ class TWStreetController
      */
     public function line($str)
     {
-		$c = $this->color;
-		echo $c($str)->green().PHP_EOL;
+        $c = $this->color;
+        echo $c($str)->green().PHP_EOL;
     }
 
     /**
@@ -206,28 +207,6 @@ class TWStreetController
 
         $html = $response->getBody()->getContents();
         $this->parseHTML($html);
-        // $crawler = new Crawler($html);
-
-        // $this->city = $crawler->filter('select[name="city"]')->filter('option')->each(function (Crawler $node, $i) {
-            // do not return index 0 - "請選擇縣市"
-            // if ($i) {
-                // return $node->text();
-            // }
-        // });
-
-        // index 0 is empty value, Shift an element off the beginning of array
-        // array_shift($this->city);
-        // print_r($this->city);
-        // $pattern = '/^cityarea_account\[\d+\] = (.*);$/m';
-        // preg_match_all($pattern, $html, $matches);
-        // $this->cityAreaCount = $matches[1];
-        // print_r($this->cityAreaCount);
-
-        // $pattern = '/^cityarea\[\d+\] = \'(.*)\';$/m';
-        // preg_match_all($pattern, $html, $matches);
-        // array_unshift($matches[1], '');
-        // $this->cityArea = $matches[1];
-        // print_r($this->cityArea);
     }
     
     /**

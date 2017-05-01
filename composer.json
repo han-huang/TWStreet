@@ -19,7 +19,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Hsquare\\TaiwanStreet\\": "src/"
+            "Hsquare\\TWStreet\\": "src/"
         }
     }
 }
