@@ -65,6 +65,18 @@ class TWStreetController
     }
 
     /**
+     * Console-Color Red string.
+     *
+     * @param  string  $str
+     * @return void
+     */
+    public function error($str)
+    {
+        $c = $this->color;
+        echo $c($str)->red().PHP_EOL;
+    }
+
+    /**
      * Get data of counties, districts, and streets and export excel file.
      *
      * @return mixed
