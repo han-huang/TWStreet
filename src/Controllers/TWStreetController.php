@@ -49,7 +49,6 @@ class TWStreetController
         // $c = $this->color;
         // echo $c($str)->white();
         echo $str.PHP_EOL;
-        ;
     }
 
     /**
@@ -178,7 +177,7 @@ class TWStreetController
      * Create Excel.
      *
      * @param  array  $rows
-     * @return void
+     * @return string $output
      */
     public function createExcel($rows)
     {
@@ -195,6 +194,8 @@ class TWStreetController
                 $sheet->fromArray($rows, null, 'A1', false, false);
             });
         })->store('xlsx', storage_path('excel/exports'));
+        $output = 'street'.$now.'.xlsx';
+        return $output;
     }
 
     /**
@@ -220,7 +221,7 @@ class TWStreetController
         $html = $response->getBody()->getContents();
         $this->parseHTML($html);
     }
-    
+
     /**
      * Parse HTML.
      *
