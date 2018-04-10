@@ -248,7 +248,7 @@ class TWStreetController
         $this->cityAreaCount = $matches[1];
         print_r($this->cityAreaCount);
 
-        $pattern = '/^cityarea\[\d+\] = \'(.*)\';$/m';
+        $pattern = '/^cityarea\[\d+\] = \"(.*)\";$/m';
         preg_match_all($pattern, $html, $matches);
         array_unshift($matches[1], '');
         $this->cityArea = $matches[1];
